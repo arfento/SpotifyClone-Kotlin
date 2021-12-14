@@ -20,6 +20,7 @@ import com.ims.spotifyclone_kotlin.exoplayer.callback.MusicPlaybackPrepare
 import com.ims.spotifyclone_kotlin.exoplayer.callback.MusicPlayerEventListener
 import com.ims.spotifyclone_kotlin.exoplayer.callback.MusicPlayerNotificationListener
 import com.ims.spotifyclone_kotlin.others.Constants.MEDIA_ROOT_ID
+import com.ims.spotifyclone_kotlin.others.Constants.NETWORK_ERROR
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.*
 import javax.inject.Inject
@@ -159,6 +160,7 @@ class MusicService : MediaBrowserServiceCompat() {
                             isPlayerInitialized = true
                         }
                     }else{
+                        mediaSession.sendSessionEvent(NETWORK_ERROR, null)
                         result.sendResult(null)
                     }
                 }
