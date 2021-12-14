@@ -1,10 +1,11 @@
-package com.ims.spotifyclone_kotlin
+package com.ims.spotifyclone_kotlin.ui.fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.ims.spotifyclone_kotlin.R
 
 class SongFragment : Fragment() {
 
