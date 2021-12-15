@@ -52,6 +52,7 @@ class MusicNotificationManager(
         }
 
         override fun createCurrentContentIntent(player: Player): PendingIntent? {
+            newSongCallbacks()
             return mediaController.sessionActivity
         }
 
